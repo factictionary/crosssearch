@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossSearch - Crossword Meets Word Search | Free Puzzle Game</title>
+    <meta name="description" content="CrossSearch is the ultimate fusion of two classic word puzzles in one addictive game. Enjoy Crossword + Word Search with three difficulty levels, smart hints, and offline play.">
+    <meta name="keywords" content="crossword, word search, puzzle game, word game, brain game, offline games, CrossSearch, Factictionary, free puzzle app">
+    <meta name="author" content="Factictionary">
+    <meta property="og:title" content="CrossSearch - Where Crossword Meets Word Search">
+    <meta property="og:description" content="Two classic puzzles. One addictive game. Play Crossword + Word Search anywhere, offline.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://crosssearch.factictionary.in">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<!-- ============== NAVIGATION ============== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#home" class="nav-brand">
+            <span class="brand-logo">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#7C3AED"/>
+                            <stop offset="50%" stop-color="#EC4899"/>
+                            <stop offset="100%" stop-color="#F59E0B"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="40" height="40" rx="10" fill="url(#brandGrad)"/>
+                    <text x="14" y="27" fill="white" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="16">X</text>
+                    <text x="28" y="27" fill="white" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="16">S</text>
+                </svg>
+            </span>
+            <span class="brand-text">CrossSearch</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#features">Features</a>
+            <a href="#modes">Game Modes</a>
+            <a href="#how-it-works">How to Play</a>
+            <a href="#faq">FAQ</a>
+            <a href="https://play.google.com/store/apps/details?id=in.factictionary.crosssearch" target="_blank" rel="noopener" class="nav-mobile-cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.4.2-.7.5-.9l9.7 9.4-9.7 9.4c-.3-.2-.5-.5-.5-.9zm10.4-7.5L4.6 4.2l12.4 7.2-3.6 1.6zm0 0l3.6 1.6-12.4 7.2 8.8-8.8zM21 12c0 .5-.3.9-.7 1.1l-4 2.3-3.7-3.4 3.7-3.4 4 2.3c.4.2.7.6.7 1.1z"/></svg>
+                Play Free
+            </a>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=in.factictionary.crosssearch" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.4.2-.7.5-.9l9.7 9.4-9.7 9.4c-.3-.2-.5-.5-.5-.9zm10.4-7.5L4.6 4.2l12.4 7.2-3.6 1.6zm0 0l3.6 1.6-12.4 7.2 8.8-8.8zM21 12c0 .5-.3.9-.7 1.1l-4 2.3-3.7-3.4 3.7-3.4 4 2.3c.4.2.7.6.7 1.1z"/></svg>
+            Play Free
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ============== HERO SECTION ============== -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Two Classics. One Addictive Game.</span>
+            </div>
+            <h1 class="hero-title">
+                Where <span class="text-gradient">Crossword</span><br>
+                meets <span class="text-gradient-2">Word Search</span>
+            </h1>
+            <p class="hero-subtitle">
+                CrossSearch combines the clue-solving thrill of crosswords with the
+                letter-hunting excitement of word searches. Three difficulty levels,
+                smart hints, and offline play — the perfect brain workout in your pocket.
+            </p>
+            <div class="hero-actions">
+                <a href="https://play.google.com/store/apps/details?id=in.factictionary.crosssearch" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.4.2-.7.5-.9l9.7 9.4-9.7 9.4c-.3-.2-.5-.5-.5-.9zm10.4-7.5L4.6 4.2l12.4 7.2-3.6 1.6zm0 0l3.6 1.6-12.4 7.2 8.8-8.8zM21 12c0 .5-.3.9-.7 1.1l-4 2.3-3.7-3.4 3.7-3.4 4 2.3c.4.2.7.6.7 1.1z"/></svg>
+                    Download Free
+                </a>
+                <a href="#modes" class="btn btn-secondary btn-lg">
+                    Explore Modes
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    <span>Plays Offline</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span>Quick 5-min Puzzles</span>
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    <span>Family Friendly</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="app-header-bar">
+                            <div class="app-bar-title">CrossSearch</div>
+                            <div class="app-bar-icon">★</div>
+                        </div>
+                        <div class="puzzle-tabs">
+                            <div class="tab tab-active">Crossword</div>
+                            <div class="tab">Word Search</div>
+                        </div>
+                        <div class="puzzle-grid">
+                            <div class="cell cell-block">·</div>
+                            <div class="cell cell-letter">C</div>
+                            <div class="cell cell-letter">A</div>
+                            <div class="cell cell-letter">T</div>
+                            <div class="cell cell-block">·</div>
+                            <div class="cell cell-letter">D</div>
+                            <div class="cell cell-letter">O</div>
+                            <div class="cell cell-letter">G</div>
+                            <div class="cell cell-block">·</div>
+                            <div class="cell cell-letter">B</div>
+                            <div class="cell cell-letter highlight">I</div>
+                            <div class="cell cell-letter highlight">R</div>
+                            <div class="cell cell-letter highlight">D</div>
+                            <div class="cell cell-block">·</div>
+                            <div class="cell cell-letter">F</div>
+                            <div class="cell cell-letter">I</div>
+                            <div class="cell cell-letter">S</div>
+                            <div class="cell cell-letter">H</div>
+                            <div class="cell cell-block">·</div>
+                            <div class="cell cell-letter">S</div>
+                            <div class="cell cell-letter">U</div>
+                            <div class="cell cell-letter">N</div>
+                            <div class="cell cell-block">·</div>
+                            <div class="cell cell-letter">T</div>
+                            <div class="cell cell-letter">R</div>
+                            <div class="cell cell-letter">E</div>
+                            <div class="cell cell-letter">E</div>
+                        </div>
+                        <div class="clue-bar">
+                            <div class="clue-label">3 Across</div>
+                            <div class="clue-text">Feathered friend →</div>
+                        </div>
+                        <div class="level-pills">
+                            <div class="pill">NOVICE</div>
+                            <div class="pill pill-active">EXPLORER</div>
+                            <div class="pill">MASTER</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-badge badge-1">
+                    <span class="badge-emoji">🧩</span>
+                    <span class="badge-text">500+ Puzzles</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <span class="badge-emoji">⚡</span>
+                    <span class="badge-text">Smart Hints</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== LOGOS / SOCIAL PROOF ============== -->
+<section class="logos-section">
+    <div class="container">
+        <p class="logos-label">From the makers of</p>
+        <div class="logos-strip">
+            <span class="logo-item">Chalkly</span>
+            <span class="logo-divider"></span>
+            <span class="logo-item">Stack Blitz</span>
+            <span class="logo-divider"></span>
+            <span class="logo-item">SpoofDaily</span>
+            <span class="logo-divider"></span>
+            <span class="logo-item">Puzzle Mania</span>
+            <span class="logo-divider"></span>
+            <span class="logo-item">SpeakSmart</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============== FEATURES ============== -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Why CrossSearch</div>
+            <h2 class="section-title">A puzzle game <span class="text-gradient">that respects your time</span></h2>
+            <p class="section-subtitle">Beautiful, fast and brain-friendly. Every feature exists to keep you in flow.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon icon-grad-1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3>Lightning-Fast UI</h3>
+                <p>Smooth animations and snappy interactions mean you spend time solving, not waiting.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon icon-grad-2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 6 1 1 1 2 1 3h6c0-1 0-2 1-3 1-1 3-3 3-6a7 7 0 0 0-7-7z"/></svg>
+                </div>
+                <h3>Smart Hint System</h3>
+                <p>Stuck on a clue? Get unstuck in seconds with helpful hints that teach, not spoil.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon icon-grad-3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                </div>
+                <h3>Plays 100% Offline</h3>
+                <p>No internet? No problem. Enjoy every puzzle on planes, trains and road trips.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon icon-grad-4">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <h3>Progress Tracking</h3>
+                <p>Watch your skills grow across all levels with personal stats and streaks.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon icon-grad-5">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Auto-Save</h3>
+                <p>Pick up exactly where you left off — your progress is always safe and synced.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon icon-grad-6">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </div>
+                <h3>Haptic Feedback</h3>
+                <p>Satisfying tactile response on every correct letter — feel the win, literally.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== GAME MODES ============== -->
+<section class="modes" id="modes">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Game Modes</div>
+            <h2 class="section-title">Two puzzles. <span class="text-gradient-2">Infinite variety.</span></h2>
+            <p class="section-subtitle">Switch between modes to train different parts of your brain — or just to keep things fresh.</p>
+        </div>
+
+        <div class="modes-grid">
+            <div class="mode-card reveal mode-crossword">
+                <div class="mode-visual">
+                    <div class="mini-grid">
+                        <div class="mini-cell mini-block"></div>
+                        <div class="mini-cell">C</div>
+                        <div class="mini-cell">A</div>
+                        <div class="mini-cell">T</div>
+                        <div class="mini-cell mini-block"></div>
+                        <div class="mini-cell">R</div>
+                        <div class="mini-cell">A</div>
+                        <div class="mini-cell">I</div>
+                        <div class="mini-cell">N</div>
+                        <div class="mini-cell mini-block"></div>
+                        <div class="mini-cell">B</div>
+                        <div class="mini-cell mini-highlight">O</div>
+                        <div class="mini-cell mini-highlight">O</div>
+                        <div class="mini-cell mini-highlight">K</div>
+                        <div class="mini-cell mini-block"></div>
+                        <div class="mini-cell">T</div>
+                        <div class="mini-cell">R</div>
+                        <div class="mini-cell">E</div>
+                        <div class="mini-cell">E</div>
+                        <div class="mini-cell mini-block"></div>
+                        <div class="mini-cell">F</div>
+                        <div class="mini-cell">I</div>
+                        <div class="mini-cell">S</div>
+                        <div class="mini-cell">H</div>
+                    </div>
+                </div>
+                <div class="mode-content">
+                    <div class="mode-tag">MODE 01</div>
+                    <h3>Crossword</h3>
+                    <p>Read clever clues, fill the grid horizontally and vertically. Train your analytical mind, vocabulary and lateral thinking.</p>
+                    <ul class="mode-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Clue-driven puzzles</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Across & down entries</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Builds vocabulary</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mode-card reveal mode-wordsearch">
+                <div class="mode-visual">
+                    <div class="mini-grid">
+                        <div class="mini-cell">S</div>
+                        <div class="mini-cell">E</div>
+                        <div class="mini-cell">A</div>
+                        <div class="mini-cell">R</div>
+                        <div class="mini-cell">C</div>
+                        <div class="mini-cell">H</div>
+                        <div class="mini-cell">D</div>
+                        <div class="mini-cell">O</div>
+                        <div class="mini-cell">G</div>
+                        <div class="mini-cell">W</div>
+                        <div class="mini-cell mini-highlight">C</div>
+                        <div class="mini-cell mini-highlight">A</div>
+                        <div class="mini-cell mini-highlight">T</div>
+                        <div class="mini-cell">T</div>
+                        <div class="mini-cell">R</div>
+                        <div class="mini-cell">E</div>
+                        <div class="mini-cell">E</div>
+                        <div class="mini-cell">L</div>
+                        <div class="mini-cell">E</div>
+                        <div class="mini-cell">A</div>
+                        <div class="mini-cell">F</div>
+                        <div class="mini-cell">S</div>
+                        <div class="mini-cell">H</div>
+                        <div class="mini-cell">B</div>
+                        <div class="mini-cell">O</div>
+                    </div>
+                </div>
+                <div class="mode-content">
+                    <div class="mode-tag mode-tag-2">MODE 02</div>
+                    <h3>Word Search</h3>
+                    <p>Scan letter grids, find hidden words in any direction. Train pattern recognition, focus and lightning-fast scanning.</p>
+                    <ul class="mode-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 8-directional hunting</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Theme-based grids</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sharpens focus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="levels reveal">
+            <div class="level-header">
+                <h3>Three difficulty levels to match your mood</h3>
+                <p>Start easy, climb at your own pace, become a Master.</p>
+            </div>
+            <div class="levels-grid">
+                <div class="level-card level-novice">
+                    <div class="level-number">01</div>
+                    <div class="level-name">NOVICE</div>
+                    <p>Perfect for beginners! Larger grids, simpler words, gentle hints. Build your confidence while having fun.</p>
+                </div>
+                <div class="level-card level-explorer">
+                    <div class="level-number">02</div>
+                    <div class="level-name">EXPLORER</div>
+                    <p>Ready for more? Medium difficulty with challenging vocabulary and strategic grid layouts.</p>
+                </div>
+                <div class="level-card level-master">
+                    <div class="level-number">03</div>
+                    <div class="level-name">MASTER</div>
+                    <p>Ultimate challenge awaits! Complex words, tight grids, and no room for errors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">How to Play</div>
+            <h2 class="section-title">Up and solving in <span class="text-gradient">30 seconds</span></h2>
+            <p class="section-subtitle">No accounts, no tutorials. Just open the app and start playing.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card reveal">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+                <h3>Download Free</h3>
+                <p>Grab CrossSearch from Google Play — no hidden charges, no subscriptions.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Pick a Mode</h3>
+                <p>Choose Crossword or Word Search, then pick your difficulty level.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Solve & Level Up</h3>
+                <p>Crack puzzles, earn streaks, and conquer the Master tier at your pace.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== USE CASES ============== -->
+<section class="usecases">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">When to Play</div>
+            <h2 class="section-title">Fits into <span class="text-gradient-2">every minute of your day</span></h2>
+        </div>
+        <div class="usecase-grid">
+            <div class="usecase-card reveal">
+                <div class="usecase-emoji">☕</div>
+                <h3>Morning Brain Warm-up</h3>
+                <p>Start your day with a 5-minute puzzle that wakes up your mind better than coffee.</p>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-emoji">🚇</div>
+                <h3>Commute Companion</h3>
+                <p>Turn dead time into growth time on the bus, train or subway — works fully offline.</p>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-emoji">📚</div>
+                <h3>Build Vocabulary</h3>
+                <p>Expand your word bank naturally with clues that challenge without overwhelming.</p>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-emoji">😌</div>
+                <h3>Unwind Before Bed</h3>
+                <p>A calm, satisfying alternative to doomscrolling. Drift off smarter.</p>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-emoji">👨‍👩‍👧‍👦</div>
+                <h3>Family Time</h3>
+                <p>All ages can play together — friendly competition that sparks real connection.</p>
+            </div>
+            <div class="usecase-card reveal">
+                <div class="usecase-emoji">✈️</div>
+                <h3>Travel Mode</h3>
+                <p>No signal at 30,000 feet? No problem — every puzzle is fully playable offline.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== STATS ============== -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat reveal">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Puzzle Modes</div>
+            </div>
+            <div class="stat reveal">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Difficulty Levels</div>
+            </div>
+            <div class="stat reveal">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Offline Ready</div>
+            </div>
+            <div class="stat reveal">
+                <div class="stat-num">0₹</div>
+                <div class="stat-label">To Start Playing</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Players Love It</div>
+            <h2 class="section-title">What our early players are <span class="text-gradient">saying</span></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial reveal">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Finally, a word game that does something different. The two-mode combo is genius — I switch depending on my mood."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar avatar-1">P</div>
+                    <div>
+                        <div class="author-name">Priya S.</div>
+                        <div class="author-role">Crossword fan</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial reveal">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The Master level is genuinely hard. I love the haptic feedback when you find a word — feels so satisfying."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar avatar-2">R</div>
+                    <div>
+                        <div class="author-name">Rohan M.</div>
+                        <div class="author-role">Puzzle enthusiast</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial reveal">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Plays perfectly on my commute with no signal. Saved me from so many boring train rides already!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar avatar-3">A</div>
+                    <div>
+                        <div class="author-name">Anita K.</div>
+                        <div class="author-role">Daily commuter</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">FAQ</div>
+            <h2 class="section-title">Got <span class="text-gradient-2">questions?</span></h2>
+            <p class="section-subtitle">Quick answers to the things players ask most.</p>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Is CrossSearch really free?</span>
+                    <svg class="faq-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes — the game is free to download and play. Some optional ads support development, but you can keep playing without spending anything.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Does it work without internet?</span>
+                    <svg class="faq-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Every puzzle runs fully offline. Just open the app and play — perfect for flights, commutes, or remote areas.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question" aria-expanded="false">
+                    <span>How is it different from other word games?</span>
+                    <svg class="faq-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Most word games stick to one formula. CrossSearch fuses two classics — Crossword (clue-solving) and Word Search (letter-hunting) — so you get variety and train two different cognitive skills in one app.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Can I play across difficulty levels?</span>
+                    <svg class="faq-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. Start at Novice to learn the ropes, move up to Explorer for a real workout, and take on Master when you're ready for the ultimate challenge. Your progress is saved per level.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Will my progress sync across devices?</span>
+                    <svg class="faq-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Progress is auto-saved locally on your device, so you can pick up right where you left off. Cross-device sync is on our roadmap.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Is CrossSearch suitable for kids?</span>
+                    <svg class="faq-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes — it's rated Everyone. Novice level is great for kids and beginners, and the family-friendly competition makes it perfect to play together.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="cta">
+    <div class="cta-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <div class="container cta-container reveal">
+        <h2 class="cta-title">Ready for your next <span class="text-gradient">puzzle fix?</span></h2>
+        <p class="cta-subtitle">Download CrossSearch free and start solving in seconds.</p>
+        <div class="cta-actions">
+            <a href="https://play.google.com/store/apps/details?id=in.factictionary.crosssearch" target="_blank" rel="noopener" class="btn btn-primary btn-xl">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.4.2-.7.5-.9l9.7 9.4-9.7 9.4c-.3-.2-.5-.5-.5-.9zm10.4-7.5L4.6 4.2l12.4 7.2-3.6 1.6zm0 0l3.6 1.6-12.4 7.2 8.8-8.8zM21 12c0 .5-.3.9-.7 1.1l-4 2.3-3.7-3.4 3.7-3.4 4 2.3c.4.2.7.6.7 1.1z"/></svg>
+                Get it on Google Play
+            </a>
+            <a href="#features" class="btn btn-ghost btn-xl">
+                Learn More
+            </a>
+        </div>
+        <p class="cta-note">Free download · Works offline · Family-friendly</p>
+    </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <a href="#home" class="nav-brand">
+                <span class="brand-logo">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="10" fill="url(#brandGrad)"/>
+                        <text x="14" y="27" fill="white" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="16">X</text>
+                        <text x="28" y="27" fill="white" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="16">S</text>
+                    </svg>
+                </span>
+                <span class="brand-text">CrossSearch</span>
+            </a>
+            <p class="footer-tagline">Where Crossword Meets Word Search.<br>An addictive puzzle game by Factictionary.</p>
+        </div>
+        <div class="footer-cols">
+            <div class="footer-col">
+                <h4>Game</h4>
+                <a href="#modes">Modes</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How to Play</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="https://factictionary.in" target="_blank" rel="noopener">Factictionary</a>
+                <a href="mailto:factictionary@gmail.com">Contact</a>
+                <a href="https://crosssearch.factictionary.in/privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get the App</h4>
+                <a href="https://play.google.com/store/apps/details?id=in.factictionary.crosssearch" target="_blank" rel="noopener">Google Play</a>
+                <p class="footer-meta">Made with care in Bengaluru, India</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© <span id="year"></span> Factictionary. All rights reserved.</p>
+            <p>CrossSearch is a product of <a href="https://factictionary.in" target="_blank" rel="noopener">Factictionary</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
